@@ -921,10 +921,11 @@ public class UserList : GreeterList
 
     private bool should_show_session_badge ()
     {
-        if (UnityGreeter.singleton.test_mode)
-            return get_selected_id () != "no-badge";
-        else
-            return LightDM.get_sessions ().length () > 1;
+        var no_badge_users = UGSettings.get_strv (UGSettings.KEY_NO_BADGE_USERS);
+        foreach (var username in no_badge_users)
+            if (get_selected_id () == username) 
+                return false;
+        return LightDM.get_sessions ().length () > 1;  
     }
 
     private Gdk.Pixbuf? get_badge ()

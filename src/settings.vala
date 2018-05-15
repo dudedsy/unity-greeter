@@ -40,6 +40,7 @@ public class UGSettings
     public static const string KEY_PLAY_READY_SOUND = "play-ready-sound";
     public static const string KEY_INDICATORS = "indicators";
     public static const string KEY_HIDDEN_USERS = "hidden-users";
+    public static const string KEY_NO_BADGE_USERS = "no-badge-users";
     public static const string KEY_GROUP_FILTER = "group-filter";
     public static const string KEY_IDLE_TIMEOUT = "idle-timeout";    
 

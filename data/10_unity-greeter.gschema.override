@@ -1,0 +1,3 @@
+[com.canonical.unity-greeter]
+no-badge-users = ['brian', 'messages-after-login', 'no-password', 'no-badge']
+hidden-users = ['messages-after-login', 'test1']

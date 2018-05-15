@@ -91,8 +91,12 @@
       <summary>Which indicators to load</summary>
     </key>
     <key name="hidden-users" type="as">
-      <default>[]</default>
+      <default>['no-badge']</default>
       <summary>List of usernames that are hidden until a special key combination is hit</summary>
+    </key>
+    <key name="no-badge-users" type="as">
+      <default>['no-badge']</default>
+      <summary>List of usernames that are never shown a session badge</summary>
     </key>
     <key name="group-filter" type="as">
       <default>[]</default>
