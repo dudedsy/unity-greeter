@@ -922,8 +922,9 @@ public class UserList : GreeterList
     private bool should_show_session_badge ()
     {
         var no_badge_users = UGSettings.get_strv (UGSettings.KEY_NO_BADGE_USERS);
+        if (no_badge_users[0] == '*') return false;        
         foreach (var username in no_badge_users)
-            if (get_selected_id () == username) 
+            if (username == get_selected_id ()) 
                 return false;
         return LightDM.get_sessions ().length () > 1;  
     }
